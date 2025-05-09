@@ -63,7 +63,6 @@ The notebook includes:
 - Feature engineering (including NLP on text reviews)
 - Model training and evaluation
 - Hyperparameter tuning using GridSearchCV
-- Model persistence and final evaluation
 
 ---
 
