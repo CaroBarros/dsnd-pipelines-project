@@ -1,55 +1,81 @@
-# README Template
+# Project Title: Data Science Pipeline
 
-Below is a template provided for use when building your README file for students.
+This project utilizes data from **StyleSense**, a rapidly growing online women's clothing retailer, to predict whether a customer would recommend a product. The predictive model analyzes a variety of features—numerical, categorical, and textual—including the review text, customer age, product category, department name, high-level division, and the number of customers who found the review helpful. These inputs help determine the likelihood of a product recommendation.
 
-# Project Title
+This project is part of **Course 4: Data Science Pipelines** of the **Data Science Nanodegree** by Udacity.
 
-Project description goes here.
+---
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+These instructions will help you set up the project and run it locally on your machine for development and testing purposes.
 
 ### Dependencies
 
+Make sure you have the following Python libraries installed:
+
 ```
-Examples here
+pandas  
+scikit-learn  
+spacy  
+notebook  
+```
+
+Install them using pip:
+
+```bash
+pip install pandas scikit-learn spacy notebook
+python -m spacy download en_core_web_sm
 ```
 
 ### Installation
 
-Step by step explanation of how to get a dev environment running.
+1. Clone the repository:
 
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
+```bash
+git clone https://github.com/your-username/data-science-pipeline.git
+cd data-science-pipeline
 ```
 
-## Project Instructions
+2. Launch Jupyter Notebook:
 
-This section should contain all the student deliverables for this project.
+```bash
+jupyter notebook
+```
+
+3. Open the notebook `project_ml_pipeline.ipynb` located inside the `project_ml_pipelines` folder.
+
+---
+
+## Project Structure
+
+```
+project_ml_pipelines/
+├── data/
+│   └── reviews.csv           # Dataset used for building the ML pipeline
+├── project_ml_pipeline.ipynb # Main notebook with full pipeline development
+```
+
+### Notebook Features
+
+The notebook includes:
+- Data loading and preprocessing
+- Feature engineering (including NLP on text reviews)
+- Model training and evaluation
+- Hyperparameter tuning using GridSearchCV
+- Model persistence and final evaluation
+
+---
 
 ## Built With
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+* [Pandas](https://pandas.pydata.org/) - Data manipulation and analysis
+* [scikit-learn](https://scikit-learn.org/) - Machine learning library
+* [spaCy](https://spacy.io/) - Natural language processing
+* [Jupyter Notebook](https://jupyter.org/) - Interactive computing environment
 
-Include all items used to build project.
+---
 
 ## License
 
-[License](LICENSE.txt)
+This project is licensed under the terms of the [MIT License](LICENSE.txt).
